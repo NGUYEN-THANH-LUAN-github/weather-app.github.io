@@ -1,0 +1,28 @@
+{
+  "name": "weather-app.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGUYEN-THANH-LUAN-github/weather-app.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NGUYEN-THANH-LUAN-github/weather-app.github.io/issues"
+  },
+  "homepage": "https://github.com/NGUYEN-THANH-LUAN-github/weather-app.github.io#readme",
+  "devDependencies": {
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "date-fns": "^2.22.1",
+    "iso-3166-1-alpha-2": "^1.0.0"
+  }
+}

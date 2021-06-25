@@ -1,0 +1,41 @@
+@import 'reset.scss';
+
+html,
+body {
+  min-height: 100%;
+}
+
+// body {
+//   background: url(/src/wallpaper/wallpaper.jpg) no-repeat center;
+//   background-size: cover;
+// }
+
+main {
+  padding: 30px;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+svg {
+  height: 40px;
+  fill: black;
+}
+
+footer {
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 20px;
+  i {
+    margin-left: 5px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
