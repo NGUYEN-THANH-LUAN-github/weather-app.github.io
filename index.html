@@ -17,25 +17,31 @@
     <main>
       <div class="top-info">
         <section class="main-infos">
-          <h1>Few Clouds</h1>
-          <p>Fukuoka</p>
-          <p><span>Tuesday</span> 22nd Jun</p>
-          <p>7:53 pm</p>
-          <p>23 °C</p>
-          <img src="" alt="" />
-          <form action="#">
+          <div class="description">
+            <h1></h1>
+            <p class="city"></p>
+          </div>
+          <p class="date"></p>
+          <p class="time"></p>
+          <div class="temp">
+            <span></span>
+            <img src="" alt="" />
+          </div>
+          <form>
             <input
-              id="city"
               type="text"
-              placeholder="Search Location"
+              class="border-0"
+              id="city"
+              placeholder="Search Location..."
               autofocus
+              autocomplete="off"
             />
-            <button type="submit">Search</button>
+            <i class="fas fa-search"></i>
           </form>
         </section>
 
         <aside class="side-infos">
-          <div class="side-info">
+          <div class="info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="Capa_1"
@@ -64,13 +70,13 @@
                 <circle cx="289.131" cy="146.795" r="10"></circle>
               </g>
             </svg>
-            <div>
-              <p>Feels Life</p>
-              <p>23 °C</p>
+            <div class="info-piece">
+              <p class="category">Feels Life</p>
+              <p class="numbers" feels-like></p>
             </div>
           </div>
 
-          <div>
+          <div class="info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -102,13 +108,13 @@
                 </g>
               </g>
             </svg>
-            <div>
-              <p>Humidity</p>
-              <p>52 %</p>
+            <div class="info-piece">
+              <p class="category">Humidity</p>
+              <p class="numbers" humidity></p>
             </div>
           </div>
 
-          <div>
+          <div class="info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
@@ -119,13 +125,13 @@
                 d="M25 4c-0.332 0-0.66 0.023-0.987 0.070-1.867-2.544-4.814-4.070-8.013-4.070s-6.145 1.526-8.013 4.070c-0.327-0.047-0.655-0.070-0.987-0.070-3.859 0-7 3.141-7 7s3.141 7 7 7c0.856 0 1.693-0.156 2.482-0.458 1.81 1.578 4.112 2.458 6.518 2.458 2.409 0 4.708-0.88 6.518-2.458 0.789 0.302 1.626 0.458 2.482 0.458 3.859 0 7-3.141 7-7s-3.141-7-7-7zM25 16c-1.070 0-2.057-0.344-2.871-0.917-1.467 1.768-3.652 2.917-6.129 2.917s-4.662-1.148-6.129-2.917c-0.813 0.573-1.801 0.917-2.871 0.917-2.762 0-5-2.238-5-5s2.238-5 5-5c0.676 0 1.316 0.138 1.902 0.38 1.327-2.588 3.991-4.38 7.098-4.38s5.771 1.792 7.096 4.38c0.587-0.242 1.229-0.38 1.904-0.38 2.762 0 5 2.238 5 5s-2.238 5-5 5zM14.063 30c0 1.105 0.895 2 2 2s2-0.895 2-2-2-4-2-4-2 2.895-2 4zM22 28c0 1.105 0.895 2 2 2s2-0.895 2-2-2-4-2-4-2 2.895-2 4zM6 24c0 1.105 0.894 2 2 2s2-0.895 2-2-2-4-2-4-2 2.895-2 4z"
               ></path>
             </svg>
-            <div>
-              <p>Chance of Rain</p>
-              <p>0 %</p>
+            <div class="info-piece">
+              <p class="category">Chance of Rain</p>
+              <p class="numbers" chance-of-rain></p>
             </div>
           </div>
 
-          <div>
+          <div class="info">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
@@ -136,116 +142,299 @@
                 d="M30 14c0-2.209-1.795-4-4-4-2.209 0-4 1.789-4 4h2c0-1.105 0.888-2 2-2 1.105 0 2 0.888 2 2 0 1.105-0.89 2-2.004 2h-22.996v2h23.002c2.208 0 3.998-1.795 3.998-4v0zM21 10c0-2.209-1.795-4-4-4-2.209 0-4 1.789-4 3.997v0.003h2c0-1.105 0.888-2 2-2 1.105 0 2 0.888 2 2 0 1.105-0.897 2-2.006 2h-11.994v2h12.004c2.207 0 3.996-1.795 3.996-4v0zM26 23c0 1.657-1.347 3-3 3v0c-1.657 0-3-1.342-3-2.991v-0.009h2c0 0.552 0.444 1 1 1v0c0.552 0 1-0.444 1-1v0c0-0.552-0.449-1-1.007-1h-13.993v-2h14c1.657 0 3 1.347 3 3v0 0z"
               ></path>
             </svg>
-            <div>
-              <p>Wind Speed</p>
-              <p>9.3 km/h</p>
+            <div class="info-piece">
+              <p class="category">Wind Speed</p>
+              <p class="numbers" wind-speed></p>
             </div>
           </div>
         </aside>
       </div>
+
       <section class="forecast">
-        <div class="daily-or-hourly">
-          <div class="daily"></div>
-          <div class="hourly"></div>
-          <!-- <div></div> -->
-        </div>
-        <div class="board">
           <div class="daily">
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+            <p>Daily</p>
+            <div class="daily-board">
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
-            </div>
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
-            </div>
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
-            </div>
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
-            </div>
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
-            </div>
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
-            </div>
-            <div class="weekday">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature">
-                  <div class="max"></div>
-                  <div class="min"></div>
+              <div class="weekday">
+                <div class="left">Friday</div>
+                <div class="right">
+                  <div class="temperature">
+                    <div class="max">28 °C</div>
+                    <div class="min">20 °C</div>
+                  </div>
+                  <img
+                    class="icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="light rain"
+                  />
                 </div>
-                <div class="icon"></div>
               </div>
             </div>
           </div>
 
           <div class="hourly">
-            <div class="hour">
-              <div class="left"></div>
-              <div class="right">
-                <div class="temperature"></div>
-                <div class="icon"></div>
+            <p>Hourly</p>
+            <div class="hourly-board">
+
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
               </div>
+              
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+              <div class="hour">
+                <div class="left">10pm</div>
+                <div class="right">
+                  <div class="temperature">7 °C</div>
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png"></img>
+                </div>
+              </div>
+
             </div>
           </div>
-        </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <p class="pt-2 text-center"
-          >made by n.t.luan
-          <a
-            target="_blank"
-            href="https://github.com/NGUYEN-THANH-LUAN-github/weather-app.github.io"
-            ><i class="fab fa-github text-dark"></i></a
-        ></p>
-      </div>
-    </footer>
+    <!-- <footer>
+      <p class="text-center"
+        >made by n.t.luan
+        <a
+          target="_blank"
+          href="https://github.com/NGUYEN-THANH-LUAN-github/weather-app.github.io"
+          ><i class="fab fa-github text-dark"></i></a
+      ></p>
+    </footer> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
