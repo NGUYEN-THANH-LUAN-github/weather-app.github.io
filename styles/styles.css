@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+  text-shadow: 0.07em 0 1px black, 0 0.07em 1px black, -0.07em 0 1px black, 0 -0.07em 1px black;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62%;
+}
+
+@media (max-width: 1700px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 37%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-size: cover;
+}
+
+main {
+  padding: 2rem 1rem 58rem 2rem;
+}
+
+main .top-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 699px) {
+  main .top-info {
+    height: 88rem;
+  }
+}
+
+main .top-info .main-infos .description h1 {
+  font-size: 5rem;
+  margin: auto 0;
+}
+
+@media (max-width: 750px) {
+  main .top-info .main-infos .description h1 {
+    font-size: 4rem;
+  }
+}
+
+main .top-info .main-infos .description .city {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+main .top-info .main-infos .date,
+main .top-info .main-infos .time {
+  font-size: 2rem;
+}
+
+main .top-info .main-infos .date {
+  margin: 1.5rem 0 0;
+}
+
+main .top-info .main-infos .time {
+  margin-top: 0;
+}
+
+main .top-info .main-infos .temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .top-info .main-infos .temp span {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+main .top-info .main-infos .temp img {
+  height: 10rem;
+}
+
+main .top-info .main-infos form {
+  border-bottom: white solid 2px;
+  position: relative;
+  width: 27rem;
+}
+
+main .top-info .main-infos form input {
+  background: transparent;
+  height: 4rem;
+  padding: 0 0 0 0.7rem;
+  font-size: 2rem;
+}
+
+main .top-info .main-infos form input:focus {
+  outline: none;
+}
+
+main .top-info .main-infos form input::-webkit-input-placeholder {
+  color: white;
+}
+
+main .top-info .main-infos form input:-ms-input-placeholder {
+  color: white;
+}
+
+main .top-info .main-infos form input::-ms-input-placeholder {
+  color: white;
+}
+
+main .top-info .main-infos form input::placeholder {
+  color: white;
+}
+
+main .top-info .main-infos form i {
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main .top-info .main-infos form i:hover {
+  cursor: pointer;
+}
+
+main .top-info .side-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .top-info .side-infos .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .top-info .side-infos .info:nth-of-type(1) svg {
+  height: 4.3rem;
+}
+
+main .top-info .side-infos .info:nth-of-type(4) svg {
+  height: 3.3rem;
+}
+
+main .top-info .side-infos .info svg {
+  height: 4rem;
+  fill: white;
+  margin-right: 10px;
+  margin: 5px 10px 0 0;
+  -webkit-filter: drop-shadow(3px 3px 1px black);
+          filter: drop-shadow(3px 3px 1px black);
+}
+
+main .top-info .side-infos .info .info-piece {
+  display: inline-block;
+  width: 14rem;
+}
+
+main .top-info .side-infos .info .info-piece p {
+  margin-bottom: 0;
+}
+
+main .top-info .side-infos .info .info-piece .category {
+  font-size: 1.5rem;
+}
+
+main .top-info .side-infos .info .info-piece .numbers {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+main .forecast {
+  position: absolute;
+  bottom: 3rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+@media (min-width: 700px) {
+  main .forecast {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+main .forecast p {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0 2rem;
+}
+
+main .forecast .fc {
+  height: 6rem;
+  padding-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0.7rem 0.7rem;
+  border-bottom: rgba(255, 255, 255, 0.6) 1px solid;
+}
+
+main .forecast .fc .left {
+  margin: auto 0;
+  font-size: 2.2rem;
+}
+
+main .forecast .fc .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 0;
+}
+
+main .forecast .fc .right .temperature {
+  padding: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+
+main .forecast .fc .right img {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+main .forecast .daily {
+  border-radius: 5px;
+}
+
+@media (min-width: 700px) {
+  main .forecast .daily {
+    width: 40%;
+  }
+}
+
+main .forecast .daily .daily-board .temperature .max {
+  font-weight: 900;
+}
+
+main .forecast .daily .daily-board .temperature .min {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 700px) {
+  main .forecast .hourly {
+    width: 40%;
+  }
+}
+
+main .forecast .hourly .hourly-board {
+  height: 46.5rem;
+  overflow-y: scroll;
+}
+
+main .forecast .hourly .hourly-board::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+main .forecast .hourly .hourly-board::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=styles.css.map */
