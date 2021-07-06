@@ -12,24 +12,24 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 70%;
+  font-size: 62%;
 }
 
 @media (max-width: 1700px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
 }
 
 @media (max-width: 1200px) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   html {
-    font-size: 40%;
+    font-size: 37%;
   }
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 main {
-  padding: 3rem 2rem 58rem 3rem;
+  padding: 2rem 1rem 58rem 2rem;
 }
 
 main .top-info {
@@ -163,25 +163,32 @@ main .top-info .side-infos .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 20px 7px 0;
+  margin-bottom: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 main .top-info .side-infos .info:nth-of-type(1) svg {
-  height: 28px;
+  height: 4.3rem;
 }
 
 main .top-info .side-infos .info:nth-of-type(4) svg {
-  height: 20px;
+  height: 3.3rem;
 }
 
 main .top-info .side-infos .info svg {
-  height: 25px;
-  width: 30px;
+  height: 4rem;
   fill: white;
   margin-right: 10px;
   margin: 5px 10px 0 0;
   -webkit-filter: drop-shadow(3px 3px 1px black);
           filter: drop-shadow(3px 3px 1px black);
+}
+
+main .top-info .side-infos .info .info-piece {
+  display: inline-block;
+  width: 14rem;
 }
 
 main .top-info .side-infos .info .info-piece p {
@@ -211,7 +218,7 @@ main .forecast {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
 }
@@ -234,13 +241,7 @@ main .forecast p {
   margin: 2rem 0 2rem;
 }
 
-@media (min-width: 700px) {
-  main .forecast .daily {
-    width: 40%;
-  }
-}
-
-main .forecast .daily .daily-board .weekday {
+main .forecast .fc {
   height: 6rem;
   padding-left: 12px;
   display: -webkit-box;
@@ -253,19 +254,16 @@ main .forecast .daily .daily-board .weekday {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 5px;
+  margin: 0 0.7rem 0.7rem;
+  border-bottom: rgba(255, 255, 255, 0.6) 1px solid;
 }
 
-main .forecast .daily .daily-board .weekday:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-main .forecast .daily .daily-board .weekday .left {
+main .forecast .fc .left {
   margin: auto 0;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
-main .forecast .daily .daily-board .weekday .right {
+main .forecast .fc .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,7 +273,7 @@ main .forecast .daily .daily-board .weekday .right {
   margin-right: 0;
 }
 
-main .forecast .daily .daily-board .weekday .right .temperature {
+main .forecast .fc .right .temperature {
   padding: auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,15 +286,32 @@ main .forecast .daily .daily-board .weekday .right .temperature {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  margin-right: 1rem;
+  font-size: 1.8rem;
 }
 
-main .forecast .daily .daily-board .weekday .right .temperature .max {
-  font-size: 1.5rem;
+main .forecast .fc .right img {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+main .forecast .daily {
+  border-radius: 5px;
+}
+
+@media (min-width: 700px) {
+  main .forecast .daily {
+    width: 40%;
+  }
+}
+
+main .forecast .daily .daily-board .temperature .max {
   font-weight: 900;
 }
 
-main .forecast .daily .daily-board .weekday .right .temperature .min {
-  font-size: 1rem;
+main .forecast .daily .daily-board .temperature .min {
+  font-size: 1.2rem;
 }
 
 @media (min-width: 700px) {
@@ -306,66 +321,16 @@ main .forecast .daily .daily-board .weekday .right .temperature .min {
 }
 
 main .forecast .hourly .hourly-board {
-  height: 42rem;
+  height: 46.5rem;
   overflow-y: scroll;
 }
 
 main .forecast .hourly .hourly-board::-webkit-scrollbar {
   width: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 main .forecast .hourly .hourly-board::-webkit-scrollbar-thumb {
-  background: #aaa;
-}
-
-main .forecast .hourly .hourly-board .hour {
-  height: 6rem;
-  padding-left: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-radius: 5px;
-}
-
-main .forecast .hourly .hourly-board .hour:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-main .forecast .hourly .hourly-board .hour .left {
-  margin: auto 0;
-  font-size: 1.5rem;
-}
-
-main .forecast .hourly .hourly-board .hour .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 0;
-}
-
-main .forecast .hourly .hourly-board .hour .right .temperature {
-  padding: auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
 }
 /*# sourceMappingURL=styles.css.map */

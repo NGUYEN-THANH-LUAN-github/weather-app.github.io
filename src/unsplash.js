@@ -7,8 +7,7 @@ export default async function getBackGroundImg(input) {
     const json = await response.json()
 
     const randImg = getRandomNum(0, json.results.length - 1)
-
-    return json.results[randImg].urls.full
+    return json.results[randImg].urls.raw
   } catch (err) {
     alert('Picture Not Found')
   }

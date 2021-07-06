@@ -31,10 +31,6 @@ function setBackgroundImg(link) {
   document.body.style.background = `url(${link}) no-repeat center`
 }
 
-// https://api.unsplash.com/search/photos?client_id=LOffEiqJfK29D_2cNJtuW_BQfW1cF-Sv-nhyLzZY0oE&color=black&query=fukuoka
-
-// random
-// https://api.unsplash.com/photos/random?client_id=LOffEiqJfK29D_2cNJtuW_BQfW1cF-Sv-nhyLzZY0oE&color=black&query=fukuoka
 function updateMainInfos(info) {
   const description = document.querySelector('.main-infos>.description>h1')
   const city = document.querySelector('.main-infos>.description>.city')
@@ -70,22 +66,48 @@ function updateSideInfos(info) {
   wind_speed.innerText = info['wind speed']
 }
 
-function updateForecast(info) {}
+function updateForecast(info) {
+  updateDaily(info.dailyForecast)
+  updateHourly(info.hourlyForecast)
+}
 
-// chance of rain: "0.85%"
-// city: "Vung Tau"
-// country: "Viet Nam"
-// current temperature: "28°C"
-// dailyForecast: (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// date: "July 3rd, 2021"
-// description: "overcast clouds"
-// feels like: "32°C"
-// hourlyForecast: (24) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// humidity: "75%"
-// time: "7:59 am"
-// weekday: "Saturday"
-// wind speed: "2.76m/s"
-// __proto__: Object
+function updateDaily(infoDaily) {
+  const dailyBoard = document.querySelector('.daily-board')
+  dailyBoard.innerHTML = ''
+  infoDaily.forEach(info => {
+    dailyBoard.innerHTML += `
+        <div class="fc weekday">
+            <div class="left">${info.weekday}</div>
+            <div class="right">
+                <div class="temperature">
+                <div class="max">${info.maxTemp}</div>
+                <div class="min">${info.minTemp}</div>
+                </div>
+                <img
+                class="icon"
+                src="http://openweathermap.org/img/wn/${info.icon}@2x.png"
+                />
+            </div>
+        </div>
+        `
+  })
+}
+
+function updateHourly(infoHourly) {
+  const hourlyBoard = document.querySelector('.hourly-board')
+  hourlyBoard.innerHTML = ''
+  infoHourly.forEach(info => {
+    hourlyBoard.innerHTML += `
+        <div class="fc hour">
+            <div class="left">${info.time}</div>
+            <div class="right">
+                <div class="temperature">${info.temp}</div>
+                <img src="http://openweathermap.org/img/wn/${info.icon}@2x.png"></img>
+            </div>
+        </div>
+        `
+  })
+}
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
