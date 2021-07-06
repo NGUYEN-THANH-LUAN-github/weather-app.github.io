@@ -12,13 +12,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 62%;
-}
-
-@media (max-width: 1700px) {
-  html {
-    font-size: 55%;
-  }
+  font-size: 55%;
 }
 
 @media (max-width: 1200px) {
@@ -55,7 +49,7 @@ main .top-info {
 
 @media (max-width: 699px) {
   main .top-info {
-    height: 92rem;
+    height: 102rem;
   }
 }
 
@@ -207,7 +201,7 @@ main .top-info .side-infos .info .info-piece .numbers {
 
 main .forecast {
   position: absolute;
-  bottom: 8rem;
+  bottom: 5.5rem;
   right: 0;
   left: 0;
   margin: auto;
@@ -344,7 +338,7 @@ main .forecast .hourly .hourly-board::-webkit-scrollbar-thumb {
 }
 
 footer {
-  height: 5rem;
+  height: 4rem;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 0;
@@ -352,7 +346,7 @@ footer {
 }
 
 footer p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 2.1rem;
 }
 
