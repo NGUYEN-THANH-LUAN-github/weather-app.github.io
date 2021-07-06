@@ -50,7 +50,7 @@ main .top-info {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 40rem;
+  height: 45rem;
 }
 
 @media (max-width: 699px) {
@@ -207,7 +207,7 @@ main .top-info .side-infos .info .info-piece .numbers {
 
 main .forecast {
   position: absolute;
-  bottom: 3rem;
+  bottom: 8rem;
   right: 0;
   left: 0;
   margin: auto;
@@ -341,5 +341,27 @@ main .forecast .hourly .hourly-board::-webkit-scrollbar {
 
 main .forecast .hourly .hourly-board::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 2.1rem;
+}
+
+footer p i {
+  margin-left: 5px;
+}
+
+footer p i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=styles.css.map */
