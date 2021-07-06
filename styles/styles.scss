@@ -35,8 +35,9 @@ main {
   .top-info {
     display: flex;
     justify-content: space-between;
+    height: 40rem;
     @media (max-width: 699px) {
-      height: 88rem;
+      height: 92rem;
     }
     .main-infos {
       .description {
@@ -155,8 +156,12 @@ main {
     flex-direction: column;
     background-color: $base-color;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 0 4rem 2rem;
+    @media (min-width: 500px) {
+      width: 60%;
+    }
     @media (min-width: 700px) {
+      width: 80%;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -182,6 +187,7 @@ main {
         display: flex;
         justify-content: flex-end;
         margin-right: 0;
+        width: 6rem;
         .temperature {
           padding: auto 0;
           display: flex;
