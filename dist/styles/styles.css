@@ -82,6 +82,9 @@ main .top-info .main-infos .temp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .top-info .main-infos .temp span {
@@ -91,7 +94,7 @@ main .top-info .main-infos .temp span {
 }
 
 main .top-info .main-infos .temp img {
-  height: 10rem;
+  height: 15rem;
 }
 
 main .top-info .main-infos form {
@@ -240,7 +243,7 @@ main .forecast p {
 }
 
 main .forecast .fc {
-  height: 6rem;
+  height: 8rem;
   padding-left: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,6 +257,12 @@ main .forecast .fc {
           justify-content: space-between;
   margin: 0 0.7rem 0.7rem;
   border-bottom: rgba(255, 255, 255, 0.6) 1px solid;
+}
+
+@media (max-width: 500px) {
+  main .forecast .fc {
+    height: 6rem;
+  }
 }
 
 main .forecast .fc .left {
@@ -290,8 +299,8 @@ main .forecast .fc .right .temperature {
 }
 
 main .forecast .fc .right img {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
   margin-bottom: 0.5rem;
 }
 
@@ -303,6 +312,20 @@ main .forecast .daily {
   main .forecast .daily {
     width: 40%;
   }
+}
+
+main .forecast .daily .daily-board {
+  height: 46.5rem;
+  overflow-y: scroll;
+}
+
+main .forecast .daily .daily-board::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+main .forecast .daily .daily-board::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 main .forecast .daily .daily-board .temperature .max {
