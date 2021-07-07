@@ -37,7 +37,7 @@ function updateMainInfos(info) {
   const date = document.querySelector('.main-infos>.date')
   const time = document.querySelector('.main-infos>.time')
   const temp = document.querySelector('.main-infos>.temp>span')
-  const img = document.querySelector('.main-infos>.temp>img')
+  const img = document.querySelector('.main-infos>.temp img')
 
   description.innerText = info.description
     .split(' ')
@@ -74,17 +74,14 @@ function updateDaily(infoDaily) {
   infoDaily.forEach(info => {
     dailyBoard.innerHTML += `
         <div class="fc weekday">
-            <div class="left">${info.weekday}</div>
-            <div class="right">
-                <div class="temperature">
-                <div class="max">${info.maxTemp}</div>
-                <div class="min">${info.minTemp}</div>
-                </div>
-                <img
-                class="icon"
-                src="../dist/icons/${info.icon}@2x.png"
-                />
+          <div class="left">${info.weekday}</div>
+          <div class="right">
+            <div class="temperature">
+              <div class="max">${info.maxTemp}</div>
+              <div class="min">${info.minTemp}</div>
             </div>
+            <img src="../dist/icons/${info.icon}@2x.png"/>
+          </div>
         </div>
         `
   })
@@ -96,11 +93,11 @@ function updateHourly(infoHourly) {
   infoHourly.forEach(info => {
     hourlyBoard.innerHTML += `
         <div class="fc hour">
-            <div class="left">${info.time}</div>
-            <div class="right">
-                <div class="temperature">${info.temp}</div>
-                <img src="../dist/icons/${info.icon}@2x.png"></img>
-            </div>
+          <div class="left">${info.time}</div>
+          <div class="right">
+            <div class="temperature">${info.temp}</div>
+            <img src="../dist/icons/${info.icon}@2x.png"></img>
+          </div>
         </div>
         `
   })
