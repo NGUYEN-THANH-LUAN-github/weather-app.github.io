@@ -47,7 +47,7 @@ function updateMainInfos(info) {
   date.innerText = `${info.weekday}, ${info.date}`
   time.innerText = info.time.toUpperCase()
   temp.innerText = info['current temperature']
-  img.setAttribute('src', `/dist/icons/${info.icon}@2x.png`)
+  img.setAttribute('src', `./icons/${info.icon}@2x.png`)
   img.setAttribute('alt', info.description)
 }
 
@@ -80,7 +80,7 @@ function updateDaily(infoDaily) {
               <div class="max">${info.maxTemp}</div>
               <div class="min">${info.minTemp}</div>
             </div>
-            <img src="/dist/icons/${info.icon}@2x.png"/>
+            <img src="./icons/${info.icon}@2x.png"/>
           </div>
         </div>
         `
@@ -96,7 +96,7 @@ function updateHourly(infoHourly) {
           <div class="left">${info.time}</div>
           <div class="right">
             <div class="temperature">${info.temp}</div>
-            <img src="/dist/icons/${info.icon}@2x.png"></img>
+            <img src="./icons/${info.icon}@2x.png"></img>
           </div>
         </div>
         `
