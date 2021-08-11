@@ -1,5 +1,5 @@
-import getWeatherInfo from './openWeather'
-import getBackGroundImg from './unsplash'
+import getWeatherInfo from './openWeatherAPI'
+import getBackGroundImg from './unsplashAPI'
 
 export function initSearchButton() {
   const search = document.querySelector('.top-info .fa-search')
