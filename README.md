@@ -1,3 +1,3 @@
-# weather-app.github.io
+# weather-app
 
-[demo](https://nguyen-thanh-luan-github.github.io/weather-app.github.io/)
+[demo](https://thanh-luan-nguyen.github.io/weather-app/)
