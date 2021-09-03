@@ -2,7 +2,7 @@
 * {
   font-family: 'Montserrat', sans-serif;
   color: white;
-  text-shadow: 0.07em 0 1px black, 0 0.07em 1px black, -0.07em 0 1px black, 0 -0.07em 1px black;
+  text-shadow: 0.07em 0 1px black, 0 0.07em 1px black, -0.07em 0 1px black, 0 -0.07em 1px black;
 }
 
 html {
@@ -45,7 +45,7 @@ main .top-info {
 
 @media (max-width: 699px) {
   main .top-info {
-    height: 102rem;
+    height: 120rem;
   }
 }
 
@@ -268,12 +268,6 @@ main .forecast .fc {
   border-bottom: rgba(255, 255, 255, 0.6) 1px solid;
 }
 
-@media (max-width: 500px) {
-  main .forecast .fc {
-    height: 6rem;
-  }
-}
-
 main .forecast .fc .left {
   margin: auto 0;
   font-size: 2.2rem;
@@ -311,7 +305,8 @@ main .forecast .fc .right img {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   margin-bottom: 0.5rem;
-  aspect-ratio: 1/1;
+  width: 7.5rem;
+  height: 7.5rem;
 }
 
 main .forecast .daily {
@@ -368,7 +363,6 @@ main .forecast .hourly .hourly-board::-webkit-scrollbar-thumb {
 
 footer {
   height: 4rem;
-  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 0;
   width: 100%;
