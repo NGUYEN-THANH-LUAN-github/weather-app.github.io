@@ -36,7 +36,7 @@ export default async function getWeatherInfo(input) {
 
     for (let i = 1; i <= 7; i++) {
       dailyForecast.push({
-        weekday: format(fromUnixTime(jsonForecast.daily[i].dt), 'EEEE'),
+        weekday: format(fromUnixTime(jsonForecast.daily[i].dt), 'EEE'),
         maxTemp: `${Math.round(
           jsonForecast.daily[i].temp.max
         )}°${getTempSymbol()}`,
