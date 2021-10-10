@@ -1,4 +1,6 @@
-# 🌱 weather-app
+# 🌱 weather app
+
+a project from The Odin Project
 
 👉 [Live Demo](https://thanh-luan-nguyen.github.io/weather-app/)
 
